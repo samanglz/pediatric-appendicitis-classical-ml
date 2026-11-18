@@ -1,0 +1,63 @@
+# Patient-level and prepared data
+/data/
+*.pkl
+*.pickle
+*.xlsx
+*.xls
+*.parquet
+
+# Trained model artifacts
+/models/
+*.joblib
+
+# Publish only the curated publication reports
+/reports/*
+!/reports/publication/
+/reports/publication/*
+!/reports/publication/**/
+!/reports/publication/**
+
+# Local-only Colab data restoration helpers
+/restore_datasets*.py
+
+# Backups and temporary files
+*.backup*
+*.bak
+*.old
+*~
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Notebook and environment artifacts
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Row-level predictions and sensitive audit outputs
+*predictions*.csv
+*numerical_corrections*.csv
+*detailed_missingness_by_diagnosis_and_us.csv
